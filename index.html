@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganapathiraju Vaishnavi | Computer Science Engineer & IoT Innovator</title>
+  <meta name="description" content="Personal Portfolio of Ganapathiraju Vaishnavi - CSE Student, IoT Wearables Innovator, Data Analytics & Software Developer based in Vizag, AP.">
+  <meta name="keywords" content="Ganapathiraju Vaishnavi, Portfolio, Computer Science, IoT, ESP32, FastAPI, Data Analytics, Python, Smart Cities">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Interactive Constellation Canvas Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="badge-dot"></span>
+        <span>VAISHNAVI<span class="cyan-text">.DEV</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Training</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button onclick="openModal('resume-modal')" class="btn btn-secondary btn-sm">
+          <i class="fas fa-file-pdf"></i> Resume
+        </button>
+        <button class="mobile-toggle" aria-label="Open Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-graduation-cap"></i> B.Tech CSE @ Lendi | CGPA: 8.05 | Expected 2028
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Ganapathiraju Vaishnavi</span>
+        </h1>
+        <div class="hero-typing">
+          Building solutions as a <span id="hero-typing-text" class="cyan-text"></span>
+        </div>
+        <p class="hero-description">
+          Dedicated Computer Science & Engineering student specializing in Python development, IoT hardware integration, data analytics, and smart city systems. Passionate about engineering technology-driven solutions for real-world healthcare and logistics challenges.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> Explore Work
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+          <button onclick="openModal('resume-modal')" class="btn btn-secondary">
+            <i class="fas fa-eye"></i> View Resume
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3><span class="counter-val" data-target="8.05" data-decimal="true">0</span></h3>
+            <p>CGPA / 10</p>
+          </div>
+          <div class="stat-item">
+            <h3><span class="counter-val" data-target="3">0</span>+</h3>
+            <p>Flagship Projects</p>
+          </div>
+          <div class="stat-item">
+            <h3><span class="counter-val" data-target="4">0</span>+</h3>
+            <p>EduSkills Certs</p>
+          </div>
+          <div class="stat-item">
+            <h3><span class="counter-val" data-target="3">0</span></h3>
+            <p>Hackathons</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Profile Card -->
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <img src="assets/images/profile.jpg" alt="Ganapathiraju Vaishnavi" class="avatar-img">
+        </div>
+
+        <!-- Floating Badge 1 -->
+        <div class="status-floating-card status-card-1">
+          <div class="status-icon cyan">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <div class="status-info">
+            <h4>ESP32 & MAX30102</h4>
+            <p>IoT Wearable Active</p>
+          </div>
+        </div>
+
+        <!-- Floating Badge 2 -->
+        <div class="status-floating-card status-card-2">
+          <div class="status-icon purple">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="status-info">
+            <h4>FastAPI & Python</h4>
+            <p>Smart City Backend</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME & EDUCATION SECTION -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Background & Academic Journey</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-desc">Driven by curiosity and a commitment to practical engineering that improves human lives.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Objective & Story -->
+        <div class="about-card">
+          <h3><i class="fas fa-user-astronaut"></i> Career Objective</h3>
+          <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+            Dedicated Computer Science and Engineering student with a strong foundation in Python, C, Java, SQL, HTML, CSS, MongoDB, FastAPI, data analytics tools, and IoT technologies. Experienced in developing technology-driven solutions for smart transportation, smart cities, and wearable health monitoring. Interested in Software Development, Data Analytics, Python Development, and IoT-based solutions.
+          </p>
+
+          <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-main);"><i class="fas fa-brain cyan-text"></i> Core Competencies & Strengths</h4>
+          <div class="strength-tags">
+            <span class="tag-chip"><i class="fas fa-check-circle cyan-text"></i> Problem-Solving</span>
+            <span class="tag-chip"><i class="fas fa-comments cyan-text"></i> Effective Communication</span>
+            <span class="tag-chip"><i class="fas fa-users cyan-text"></i> Teamwork & Collaboration</span>
+            <span class="tag-chip"><i class="fas fa-briefcase cyan-text"></i> Dedicated Work Ethic</span>
+            <span class="tag-chip"><i class="fas fa-bolt cyan-text"></i> Quick Learning</span>
+            <span class="tag-chip"><i class="fas fa-lightbulb cyan-text"></i> Real-World Problem Solving</span>
+          </div>
+        </div>
+
+        <!-- Education Timeline -->
+        <div class="about-card">
+          <h3><i class="fas fa-university"></i> Education Timeline</h3>
+          <div class="timeline">
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2024 - 2028 (Expected)</div>
+              <h4 class="timeline-title">Bachelor of Technology – CSE</h4>
+              <p class="timeline-subtitle">Lendi Institute of Engineering and Technology</p>
+              <div class="timeline-badge"><i class="fas fa-star"></i> CGPA: 8.05 / 10</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Intermediate</div>
+              <h4 class="timeline-title">Senior Secondary Education</h4>
+              <p class="timeline-subtitle">State Board of Intermediate Education</p>
+              <div class="timeline-badge"><i class="fas fa-award"></i> Percentage: 83%</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">10th Standard</div>
+              <h4 class="timeline-title">Secondary School Certificate (SSC)</h4>
+              <p class="timeline-subtitle">State Board Education</p>
+              <div class="timeline-badge"><i class="fas fa-award"></i> Percentage: 91%</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS SECTION -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Technical Proficiency</span>
+        <h2 class="section-title">Skills & Expertise</h2>
+        <p class="section-desc">A comprehensive stack covering core computer science fundamentals, data analytics, web services, and hardware engineering.</p>
+      </div>
+
+      <!-- Skill Category Navigation Tabs -->
+      <div class="skills-nav">
+        <button class="skill-tab-btn active" data-category="all"><i class="fas fa-th-large"></i> All Skills</button>
+        <button class="skill-tab-btn" data-category="prog"><i class="fas fa-code"></i> Programming</button>
+        <button class="skill-tab-btn" data-category="web"><i class="fas fa-globe"></i> Web & Backend</button>
+        <button class="skill-tab-btn" data-category="data"><i class="fas fa-chart-bar"></i> Data & Analytics</button>
+        <button class="skill-tab-btn" data-category="iot"><i class="fas fa-microchip"></i> IoT & Hardware</button>
+        <button class="skill-tab-btn" data-category="core"><i class="fas fa-layer-group"></i> Core CS</button>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Programming -->
+        <div class="skill-card" data-category="prog">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fab fa-python"></i>
+              <h4>Python</h4>
+            </div>
+            <span class="cyan-text font-weight-bold">Advanced</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Data structures, scripting, FastAPI, Pandas & automation</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="90"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="prog">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-c"></i>
+              <h4>C Language</h4>
+            </div>
+            <span class="cyan-text">Intermediate</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Low-level logic, memory management, embedded C</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="82"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="prog">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fab fa-java"></i>
+              <h4>Java</h4>
+            </div>
+            <span class="purple-text">Basic</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Object-oriented principles, syntax & core concepts</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="68"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="prog">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-database"></i>
+              <h4>SQL</h4>
+            </div>
+            <span class="cyan-text">Intermediate</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Relational database queries, schema design & joins</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="75"></div>
+          </div>
+        </div>
+
+        <!-- Web & Backend -->
+        <div class="skill-card" data-category="web">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-bolt"></i>
+              <h4>FastAPI</h4>
+            </div>
+            <span class="cyan-text">Proficient</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">RESTful microservices, async routing, JSON response APIs</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="web">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fab fa-html5"></i>
+              <h4>HTML5 & CSS3</h4>
+            </div>
+            <span class="cyan-text">Proficient</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Responsive layouts, modern UI styling, glassmorphic design</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="88"></div>
+          </div>
+        </div>
+
+        <!-- Data & Analytics -->
+        <div class="skill-card" data-category="data">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-chart-line"></i>
+              <h4>NumPy & Pandas</h4>
+            </div>
+            <span class="cyan-text">Proficient</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Data manipulation, array computing, dataset cleaning</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="84"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="data">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-chart-pie"></i>
+              <h4>Power BI & Excel</h4>
+            </div>
+            <span class="cyan-text">Intermediate</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Data visualization, dashboards & statistical summaries</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="78"></div>
+          </div>
+        </div>
+
+        <!-- IoT & Hardware -->
+        <div class="skill-card" data-category="iot">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-microchip"></i>
+              <h4>ESP32 & Sensors</h4>
+            </div>
+            <span class="cyan-text">Specialized</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Wearable health telemetry, MAX30102 pulse oximeter, Wi-Fi IoT</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="88"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="iot">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-leaf"></i>
+              <h4>Air Quality Sensors</h4>
+            </div>
+            <span class="cyan-text">Applied</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Pollution detection, real-time alert generation for smart cities</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="82"></div>
+          </div>
+        </div>
+
+        <!-- Core CS -->
+        <div class="skill-card" data-category="core">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-cubes"></i>
+              <h4>OOP & DBMS</h4>
+            </div>
+            <span class="cyan-text">Strong Basis</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Object-oriented principles, database management architectures</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="86"></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="core">
+          <div class="skill-head">
+            <div class="skill-icon-title">
+              <i class="fas fa-network-wired"></i>
+              <h4>Networks & OS</h4>
+            </div>
+            <span class="cyan-text">Foundational</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted);">TCP/IP protocol stack, process scheduling & file systems</p>
+          <div class="skill-level-bar">
+            <div class="skill-progress" data-progress="80"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED ACADEMIC PROJECTS SECTION -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Real-World Innovation</span>
+        <h2 class="section-title">Academic Projects</h2>
+        <p class="section-desc">Practical engineering initiatives spanning IoT wearable healthcare, smart city AI digital twins, and smart transportation.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="iot">IoT & Wearables</button>
+        <button class="filter-btn" data-filter="ai">AI & Smart Cities</button>
+        <button class="filter-btn" data-filter="web">Web & Backend</button>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card" data-category="iot">
+          <div class="project-img-wrapper">
+            <img src="assets/images/health_patch.jpg" alt="Smart Health Patch Project" class="project-img">
+            <div class="project-overlay"></div>
+            <span class="project-badge"><i class="fas fa-heartbeat"></i> IoT Wearable</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Smart Health Monitoring Patch – Reusable & Rechargeable IoT Wearable</h3>
+            <p class="project-desc">
+              Developed an IoT wearable health patch that non-invasively monitors vital health parameters such as heart rate and body temperature. Features an eco-friendly reusable design with rechargeable power management to eliminate single-use medical patch waste.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">ESP32 Microcontroller</span>
+              <span class="tech-chip">MAX30102 Sensor</span>
+              <span class="tech-chip">IoT Telemetry</span>
+              <span class="tech-chip">Rechargeable Circuit</span>
+            </div>
+            <div class="project-actions">
+              <button onclick="openModal('modal-health-patch')" class="btn btn-primary btn-sm">
+                <i class="fas fa-play-circle"></i> Launch Live Sim
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="ai">
+          <div class="project-img-wrapper">
+            <img src="assets/images/smart_city.jpg" alt="Smart City AI Project" class="project-img">
+            <div class="project-overlay"></div>
+            <span class="project-badge"><i class="fas fa-city"></i> AI & Digital Twin</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Digital Twin-Based Smart City AI System</h3>
+            <p class="project-desc">
+              Engineered a smart-city monitoring platform utilizing distributed sensors to detect traffic congestion in advance, dynamically clear signal corridors for ambulances, and push real-time air pollution alerts to citizens' mobile phones.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Traffic Sensors</span>
+              <span class="tech-chip">Emergency Priority</span>
+              <span class="tech-chip">AQI Alerts</span>
+              <span class="tech-chip">Real-Time Dashboards</span>
+            </div>
+            <div class="project-actions">
+              <button onclick="openModal('modal-smart-city')" class="btn btn-primary btn-sm">
+                <i class="fas fa-desktop"></i> View System Demo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="web">
+          <div class="project-img-wrapper">
+            <img src="assets/images/route_nova.jpg" alt="Route Nova Project" class="project-img">
+            <div class="project-overlay"></div>
+            <span class="project-badge"><i class="fas fa-truck-loading"></i> Logistics & FastAPI</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Route Nova – Smart Transportation Solution</h3>
+            <p class="project-desc">
+              Contributed to an intelligent transportation load-consolidation system that pools goods from multiple origins and matches compatible freight along shared routes to maximize vehicle capacity and reduce transit fuel consumption.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">HTML5 / CSS3</span>
+              <span class="tech-chip">Load Matching Algo</span>
+              <span class="tech-chip">Python Logic</span>
+            </div>
+            <div class="project-actions">
+              <button onclick="openModal('modal-route-nova')" class="btn btn-primary btn-sm">
+                <i class="fas fa-calculator"></i> Run Matcher Sim
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNSHIPS, TRAINING & CERTIFICATIONS -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Industry Exposure & Credentials</span>
+        <h2 class="section-title">Internships & Certifications</h2>
+        <p class="section-desc">Virtual internships and professional technical certifications completed to broaden industry perspective.</p>
+      </div>
+
+      <!-- EduSkills Internship Feature Card -->
+      <div class="about-card" style="margin-bottom: 3rem; background: linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(30,41,59,0.9) 100%);">
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+          <div style="width:50px; height:50px; border-radius:12px; background:rgba(0,242,254,0.15); display:flex; align-items:center; justify-content:center; color:var(--cyan); font-size:1.5rem;">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div>
+            <h3 style="margin:0;">EduSkills – Virtual Internship & Specialized Training Programs</h3>
+            <p style="color:var(--cyan); font-weight:600; font-size:0.9rem;">Cloud, Cybersecurity, Networking & Enterprise Platforms</p>
+          </div>
+        </div>
+        <p style="color:var(--text-muted); line-height:1.7;">
+          Participated in comprehensive virtual internship programs supported by industry leaders. Gained direct hands-on exposure to cloud architecture, cybersecurity protocols, network routing, and platform deployment paradigms.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.25rem;">
+          <span class="tag-chip" style="border-color:#ff9900;"><i class="fab fa-aws" style="color:#ff9900;"></i> AWS Training</span>
+          <span class="tag-chip" style="border-color:#fa582d;"><i class="fas fa-lock" style="color:#fa582d;"></i> Palo Alto Networks</span>
+          <span class="tag-chip" style="border-color:#00a3e0;"><i class="fas fa-network-wired" style="color:#00a3e0;"></i> Juniper Networks</span>
+          <span class="tag-chip" style="border-color:#0072ce;"><i class="fas fa-cloud-upload-alt" style="color:#0072ce;"></i> Zscaler Training</span>
+        </div>
+      </div>
+
+      <!-- Certifications Grid -->
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-wifi"></i></div>
+          <div class="cert-info">
+            <h4>NPTEL – Internet of Things (IoT)</h4>
+            <p>National Programme on Technology Enhanced Learning certification in IoT architecture and sensor networks.</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-robot"></i></div>
+          <div class="cert-info">
+            <h4>Robotics – Certification & Training</h4>
+            <p>Hands-on hardware training covering robotics kinematics, motor drivers, and sensor integration.</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-database"></i></div>
+          <div class="cert-info">
+            <h4>NoSQL – GeeksforGeeks</h4>
+            <p>Certificate of training in NoSQL database fundamentals and document data modeling using MongoDB.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HACKATHONS & ACHIEVEMENTS SECTION -->
+  <section id="achievements" class="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Competitions & Milestones</span>
+        <h2 class="section-title">Achievements & Hackathons</h2>
+        <p class="section-desc">Competitive hackathon milestones demonstrating rapid problem solving and prototype development.</p>
+      </div>
+
+      <div class="achieve-grid">
+        
+        <div class="achieve-card">
+          <i class="fas fa-trophy achieve-trophy"></i>
+          <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">Smart India Hackathon (SIH)</h3>
+          <p style="color:var(--cyan); font-weight:700; margin-bottom:0.75rem;">Internal College Hackathon Finalist</p>
+          <p style="color:var(--text-muted); font-size:0.9rem;">
+            Selected for the final round of the SIH Internal College Hackathon among top competing teams for designing a high-impact technology solution.
+          </p>
+        </div>
+
+        <div class="achieve-card">
+          <i class="fas fa-medal achieve-trophy" style="color:#e100ff;"></i>
+          <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">Bullayya College Hackathon</h3>
+          <p style="color:var(--purple); font-weight:700; margin-bottom:0.75rem;">Reached Final Round & Certificate</p>
+          <p style="color:var(--text-muted); font-size:0.9rem;">
+            Successfully competed and advanced to the final evaluation round in the inter-college hackathon event.
+          </p>
+        </div>
+
+        <div class="achieve-card">
+          <i class="fas fa-award achieve-trophy" style="color:#00f2fe;"></i>
+          <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">AU Hackathon</h3>
+          <p style="color:var(--cyan); font-weight:700; margin-bottom:0.75rem;">Participation & Recognition</p>
+          <p style="color:var(--text-muted); font-size:0.9rem;">
+            Participated in Andhra University state-level hackathon, building prototype software logic within strict time constraints.
+          </p>
+        </div>
+
+        <div class="achieve-card" style="grid-column: 1 / -1; background: rgba(15,23,42,0.8);">
+          <div style="display:flex; align-items:center; gap:1rem;">
+            <i class="fas fa-hands-helping" style="font-size:2rem; color:var(--emerald);"></i>
+            <div>
+              <h3 style="font-size:1.15rem; margin-bottom:0.25rem;">Extracurricular Community Activity: NSS (National Service Scheme)</h3>
+              <p style="color:var(--text-muted); font-size:0.9rem;">
+                Participated in a one-week Special Camp in a rural village, contributing actively to community outreach, educational drives, and public welfare initiatives.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & CONNECT SECTION -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Contact & Connect</h2>
+        <p class="section-desc">Open to software engineering internships, IoT project collaborations, and full-time career opportunities.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Details -->
+        <div class="contact-info-card">
+          <h3 style="margin-bottom: 2rem;">Contact Details</h3>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-details">
+              <h4>Email Address</h4>
+              <p>
+                ganapathirajivaishnavi@gmail.com
+                <button class="contact-copy-btn" data-copy="ganapathirajivaishnavi@gmail.com" title="Copy email">
+                  <i class="far fa-copy"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-details">
+              <h4>Phone Number</h4>
+              <p>
+                +91 9346792886
+                <button class="contact-copy-btn" data-copy="9346792886" title="Copy phone">
+                  <i class="far fa-copy"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>Vizag, Andhra Pradesh, India</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-details">
+              <h4>LinkedIn Profile</h4>
+              <p>
+                <a href="https://linkedin.com/in/ganapathiraju-vaishnavi-cse-07b077428" target="_blank" style="color:var(--cyan); text-decoration:none;">
+                  ganapathiraju-vaishnavi <i class="fas fa-external-link-alt" style="font-size:0.8rem;"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-card">
+          <h3 style="margin-bottom: 1.5rem;">Send a Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your Full Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Ananya Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email">Email Address</label>
+              <input type="email" id="form-email" class="form-input" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-subject">Subject</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="Project Inquiry / Internship Opportunity" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message</label>
+              <textarea id="form-message" class="form-textarea" rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/ganapathiraju-vaishnavi-cse-07b077428" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:ganapathirajivaishnavi@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:9346792886" class="social-icon" title="Phone"><i class="fas fa-phone"></i></a>
+      </div>
+      <p>© 2026 Ganapathiraju Vaishnavi. Designed & Built with Precision & Excellence.</p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-notification" class="toast">
+    <i class="fas fa-check-circle cyan-text"></i>
+    <span id="toast-message">Message copied successfully!</span>
+  </div>
+
+  <!-- MODAL 1: HEALTH PATCH SIMULATOR -->
+  <div id="modal-health-patch" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close">&times;</button>
+      <h3 style="color:var(--cyan); margin-bottom:0.5rem;"><i class="fas fa-heartbeat"></i> Smart Health Patch Telemetry Simulator</h3>
+      <p style="color:var(--text-muted); font-size:0.9rem;">
+        Simulation of MAX30102 sensor optical telemetry paired with ESP32 micro-controller transmitting real-time heart rate and body temperature.
+      </p>
+
+      <div class="sim-container">
+        <div class="sim-display">
+          <div class="sim-metric">
+            <div id="sim-patch-bpm" class="val">74 BPM</div>
+            <div class="label">Heart Rate</div>
+          </div>
+          <div class="sim-metric">
+            <div id="sim-patch-temp" class="val">36.8 °C</div>
+            <div class="label">Body Temp</div>
+          </div>
+          <div class="sim-metric">
+            <div class="val" style="color:var(--emerald);">98 %</div>
+            <div class="label">SpO2 Oxygen</div>
+          </div>
+        </div>
+        <p id="sim-patch-status" style="text-align:center; font-weight:700; font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
+          STANDBY
+        </p>
+        <div class="sim-controls">
+          <button id="sim-patch-start" class="btn btn-primary btn-sm">Start Live Telemetry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: SMART CITY SIMULATOR -->
+  <div id="modal-smart-city" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close">&times;</button>
+      <h3 style="color:var(--cyan); margin-bottom:0.5rem;"><i class="fas fa-city"></i> Smart City Digital Twin Dispatch Dashboard</h3>
+      <p style="color:var(--text-muted); font-size:0.9rem;">
+        Simulating emergency ambulance route signal clearing and real-time air pollution alert dispatch system.
+      </p>
+
+      <div class="sim-container">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div>
+            <span style="font-weight:700; color:var(--text-main);">Urban AQI Sensor:</span>
+            <span style="color:var(--emerald); font-weight:700; margin-left:0.5rem;">42 (Good)</span>
+          </div>
+          <div>
+            <span style="font-weight:700; color:var(--text-main);">Corridor Mode:</span>
+            <span style="color:var(--cyan); font-weight:700; margin-left:0.5rem;">Dynamic AI Signal</span>
+          </div>
+        </div>
+
+        <div id="sim-city-log" style="background:#000; border:1px solid var(--border-glass); padding:1rem; border-radius:8px; height:120px; overflow-y:auto; font-family:monospace; font-size:0.85rem; margin-bottom:1rem;">
+          <div style="color:var(--text-muted);">[System Idle] Waiting for emergency alert trigger...</div>
+        </div>
+
+        <div class="sim-controls">
+          <button id="sim-city-alert" class="btn btn-primary btn-sm">
+            <i class="fas fa-ambulance"></i> Trigger Emergency Ambulance Corridor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: ROUTE NOVA SIMULATOR -->
+  <div id="modal-route-nova" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close">&times;</button>
+      <h3 style="color:var(--cyan); margin-bottom:0.5rem;"><i class="fas fa-truck-loading"></i> Route Nova Freight Consolidation Matcher</h3>
+      <p style="color:var(--text-muted); font-size:0.9rem;">
+        Test the load-matching algorithm that pools compatible partial loads along shared routes to optimize truck capacity.
+      </p>
+
+      <div class="sim-container">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div>
+            <label class="form-label">Origin Hub</label>
+            <select id="sim-route-origin" class="form-input">
+              <option value="Visakhapatnam Hub-A">Visakhapatnam Hub-A</option>
+              <option value="Vijayawada Hub-B">Vijayawada Hub-B</option>
+              <option value="Hyderabad Hub-C">Hyderabad Hub-C</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label">Destination Hub</label>
+            <select id="sim-route-dest" class="form-input">
+              <option value="Chennai Freight Hub">Chennai Freight Hub</option>
+              <option value="Bengaluru Logistics Park">Bengaluru Logistics Park</option>
+              <option value="Kolkata North Terminal">Kolkata North Terminal</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="sim-route-match" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">
+          <i class="fas fa-magic"></i> Calculate Load Optimization
+        </button>
+
+        <div id="sim-route-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: RESUME VIEWER -->
+  <div id="modal-resume" class="modal-overlay" id="resume-modal">
+    <div class="modal-container" style="max-width:850px;">
+      <button class="modal-close">&times;</button>
+      
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-glass); padding-bottom:1rem; margin-bottom:1.5rem;">
+        <div>
+          <h3 style="color:var(--text-main);">Curriculum Vitae</h3>
+          <p style="color:var(--cyan); font-weight:600; font-size:0.9rem;">Ganapathiraju Vaishnavi</p>
+        </div>
+        <button onclick="window.print()" class="btn btn-primary btn-sm">
+          <i class="fas fa-print"></i> Print / Save PDF
+        </button>
+      </div>
+
+      <!-- Formatted Resume Document View -->
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-glass); border-radius:12px; padding:2rem; line-height:1.7;">
+        
+        <div style="text-align:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem; margin-bottom:1.5rem;">
+          <h2 style="font-size:1.8rem; letter-spacing:1px; margin-bottom:0.25rem;">GANAPATHIRAJU VAISHNAVI</h2>
+          <p style="color:var(--text-muted); font-size:0.9rem;">
+            Vizag, Andhra Pradesh | 9346792886 | ganapathirajivaishnavi@gmail.com
+          </p>
+          <p style="color:var(--cyan); font-size:0.85rem; margin-top:0.25rem;">
+            LinkedIn: ganapathiraju-vaishnavi-cse-07b077428
+          </p>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <h4 style="color:var(--cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.25rem; margin-bottom:0.5rem;">CAREER OBJECTIVE</h4>
+          <p style="font-size:0.9rem; color:var(--text-muted);">
+            Dedicated Computer Science and Engineering student with a strong foundation in Python, C, Java, SQL, HTML, CSS, MongoDB, FastAPI, data analytics tools and IoT technologies. Experienced in developing technology-driven solutions for smart transportation, smart cities and wearable healthcare monitoring. Interested in Software Development, Data Analytics, Python Development and IoT-based solutions, with a strong interest in solving real-world problems through practical technology.
+          </p>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <h4 style="color:var(--cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.25rem; margin-bottom:0.5rem;">EDUCATION</h4>
+          <p style="font-size:0.9rem; font-weight:600;">Bachelor of Technology – Computer Science and Engineering</p>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Lendi Institute of Engineering and Technology | Expected Graduation: 2028 | CGPA: 8.05/10</p>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Intermediate: 83% | 10th Standard: 91%</p>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <h4 style="color:var(--cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.25rem; margin-bottom:0.5rem;">TECHNICAL SKILLS</h4>
+          <ul style="font-size:0.88rem; color:var(--text-muted); padding-left:1.2rem;">
+            <li><strong>Programming:</strong> Python, C, Java (Basic), SQL (Basic)</li>
+            <li><strong>Core CS:</strong> OOP, DBMS, Data Structures & Algorithms, Computer Networks, Operating Systems</li>
+            <li><strong>Data & Analytics:</strong> NumPy, Pandas, Jupyter Notebook, Seaborn, Microsoft Excel, Power BI, Machine Learning</li>
+            <li><strong>Web & Backend:</strong> HTML, CSS, FastAPI</li>
+            <li><strong>Database:</strong> MongoDB, NoSQL</li>
+            <li><strong>IoT & Hardware:</strong> ESP32, MAX30102, Sensors</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <h4 style="color:var(--cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.25rem; margin-bottom:0.5rem;">ACADEMIC PROJECTS</h4>
+          <p style="font-size:0.9rem; font-weight:700;">1. Smart Health Monitoring Patch – Reusable & Rechargeable IoT Wearable (Team Size: 5)</p>
+          <ul style="font-size:0.85rem; color:var(--text-muted); padding-left:1.2rem; margin-bottom:0.5rem;">
+            <li>Developed an IoT-based wearable health monitoring patch for vital parameters (heart rate, temp).</li>
+            <li>Proposed reusable & rechargeable design enabling repeated use instead of single-use replacement.</li>
+            <li>Worked with ESP32, MAX30102 and sensor data collection.</li>
+          </ul>
+
+          <p style="font-size:0.9rem; font-weight:700;">2. Digital Twin-Based Smart City AI System</p>
+          <ul style="font-size:0.85rem; color:var(--text-muted); padding-left:1.2rem; margin-bottom:0.5rem;">
+            <li>Developed smart-city monitoring concept detecting traffic bottlenecks for ambulance priority.</li>
+            <li>Integrated air-pollution monitoring for real-time mobile user alerts.</li>
+          </ul>
+
+          <p style="font-size:0.9rem; font-weight:700;">3. Route Nova – Smart Transportation Solution (Team Size: 5)</p>
+          <ul style="font-size:0.85rem; color:var(--text-muted); padding-left:1.2rem;">
+            <li>Smart transportation solution combining compatible loads along routes to improve vehicle utilization using HTML, CSS, FastAPI.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <h4 style="color:var(--cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.25rem; margin-bottom:0.5rem;">INTERNSHIPS & CERTIFICATIONS</h4>
+          <p style="font-size:0.88rem; color:var(--text-muted);">
+            • <strong>EduSkills Virtual Internships:</strong> Palo Alto Networks, AWS, Juniper Networks, Zscaler<br>
+            • <strong>NPTEL Certificate:</strong> Internet of Things (IoT)<br>
+            • <strong>Robotics:</strong> Certification / Training<br>
+            • <strong>NoSQL:</strong> GeeksforGeeks
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color:var(--cyan); border-bottom:1px solid var(--border-glass); padding-bottom:0.25rem; margin-bottom:0.5rem;">ACHIEVEMENTS & HACKATHONS</h4>
+          <p style="font-size:0.88rem; color:var(--text-muted);">
+            • Selected for Final Round of Smart India Hackathon (SIH) Internal College Hackathon.<br>
+            • Participated in AU Hackathon (Received Certificate).<br>
+            • Participated in Bullayya College Hackathon (Reached Final Round & Certificate).<br>
+            • <strong>Extracurricular:</strong> NSS 1-Week Special Camp community outreach in village.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Main Engine -->
+  <script src="script.js"></script>
+</body>
+</html>
